@@ -14,8 +14,7 @@ void copyFile(char input[], char output[])
     // '|' consider as one single line
     while (getline(in, s, '|'))
     {
-        in >> s;
-        out << s << " ";
+        out << s;
     }
     in.close();
     out.close();

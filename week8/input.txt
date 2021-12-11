@@ -1,5 +1,1 @@
-hello world
-my name is Tran Tung Lam
-nice to meet you
-how are you?
-I'm pretty good, thanks!
+My name is xyz.I am writing the code in C++.I study in abcd College.I live in Delhi.
