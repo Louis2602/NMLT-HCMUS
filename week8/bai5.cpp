@@ -3,34 +3,36 @@
 
 using namespace std;
 
-int deleteLastLine(char input[], int n)
+int deleteLastLine(char input[])
 {
-    ifstream fin(input);
+    ifstream fin;
+    fin.open(input);
     ofstream fout;
-    fout.open("tmp.txt", ios::out);
+    fout.open("tmp.txt");
 
-    char ch;
-    int line = 1;
-    while (fin.get(ch))
+    int line = 0;
+    int n = 1;
+    string s;
+    while (getline(fin, s, '\n'))
     {
-        if (ch == '\n')
-            line++;
-
-        if (line != n) // content not to be deleted
-            fout << ch;
+        line++;
     }
-    fout.close();
     fin.close();
+    fin.open(input);
+    while (getline(fin, s, '\n') && n < line)
+    {
+        n++;
+        fout << s << endl;
+    }
+    fin.close();
+    fout.close();
     remove(input);
     rename("tmp.txt", input);
 }
 
 int main()
 {
-    int n;
-    cout << "Enter the line number you want to delete: ";
-    cin >> n;
     char input[] = "input.txt";
-    deleteLastLine(input, n);
+    deleteLastLine(input);
     return 0;
 }

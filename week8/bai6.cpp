@@ -5,14 +5,18 @@ using namespace std;
 
 int deleteLastLine(char input[])
 {
-    ifstream fin(input);
+    ifstream fin;
+    fin.open(input);
     ofstream fout;
-    fout.open("tmp.txt", ios::out);
+    fout.open("tmp.txt");
 
     string s;
-    while (getline(fin, s, '\n'))
+    while (getline(fin, s))
     {
-        fout << s;
+        if (!s.empty())
+        {
+            fout << s << endl;
+        }
     }
     fout.close();
     fin.close();
