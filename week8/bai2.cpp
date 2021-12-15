@@ -10,8 +10,20 @@ int convertFile60CharsperLine(char input[], char output[])
 
     in.open(input);
     out.open(output);
-    char s[60];
-    // '|' consider as one single line
+    char ch;
+    int cnt = 0;
+    while (in.get(ch))
+    {
+        cnt++;
+        cout << cnt << " ";
+        if (cnt != 60)
+            out << ch;
+        else
+        {
+            out << endl;
+            cnt = 0;
+        }
+    }
     in.close();
     out.close();
 }
