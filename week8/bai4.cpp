@@ -9,17 +9,17 @@ int printSource(char input[])
     string s;
     in.open(input);
 
-    while (getline(in, s, '|'))
+    while (!in.eof())
     {
-        in >> s;
-        cout << s;
+        getline(in, s);
+        cout << s << '\n';
     }
     in.close();
 }
 
 int main()
 {
-    char input[] = "input.txt";
+    char input[] = "bai4.cpp";
     printSource(input);
     return 0;
 }
