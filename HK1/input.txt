@@ -1,4 +1,16 @@
-21127337 Lam 8
-21127322 Kha 7
-21128332 Lam 8
-21128523 Phat 9
+5
+2112021
+Nguyen Van AA
+8.7
+2112043
+Pham Thi BB
+4.5
+2112027
+Tran Van CC
+3.8
+2112012
+Phan Thi DD
+9.6
+2112035
+Quach Thi EE
+7.3

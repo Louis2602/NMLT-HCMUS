@@ -56,21 +56,15 @@ int sumDiagonal(int a[][MAX], int m, int n)
 {
     int sum = 0;
     for (int i = 0; i < m; ++i)
-    {
-        for (int j = 0; j < n; ++j)
-        {
-            if (i == j)
-                sum += a[i][j];
-        }
-    }
+        sum += a[i][i];
     return sum;
 }
 
 int sumDiagonalPhu(int a[][MAX], int m, int n)
 {
     int sum = 0;
-    for (int i = 0; i < n; i++)
-        sum += a[i][n - 1 - i];
+    for (int i = 0; i < m; i++)
+        sum += a[i][m - 1 - i];
     return sum;
 }
 void deleteItems(int a[][MAX], int &m, int &n)
