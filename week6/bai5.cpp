@@ -117,8 +117,7 @@ void nhapThongTinXe(Car &car)
 void xuatDanhSachXe(Car a[], int n)
 {
     printLine(90);
-    cout << "STT\t" << setw(8) << "Hang xe\t" << setw(15) << "Mau ma\t" << setw(18) << "Nam san xuat\t"
-         << setw(10) << "Gia thanh\t" << setw(10) << "So luong";
+    cout << "STT\t" << setw(8) << "Hang xe\t" << setw(15) << "Mau ma\t" << setw(18) << "Nam san xuat\t" << setw(10) << "Gia thanh\t" << setw(10) << "So luong";
     for (int i = 0; i < n; i++)
     {
         cout << "\n"
