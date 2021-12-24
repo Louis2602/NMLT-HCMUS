@@ -42,7 +42,7 @@ void reverseCharArray(char a[MAX])
     }
     cout << "Chuoi sau khi dao nguoc la: " << a << endl;
 }
-
+// kiem tra tinh doi xung
 int checkSymmetricArray(char a[MAX])
 {
     cout << "Nhap chuoi: ";

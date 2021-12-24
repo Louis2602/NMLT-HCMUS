@@ -39,10 +39,7 @@ void takeInput(string s, int MaSV)
             (a[MaSV].info)[++id] = "";
         ++i;
     }
-    for (int i = 0; i < 9; ++i)
-    {
-        cout << (a[MaSV].info)[i] << '\n';
-    }
+    cout << (a[MaSV].info)[4] << '\n';
 }
 void bai2(char danhsach[])
 {

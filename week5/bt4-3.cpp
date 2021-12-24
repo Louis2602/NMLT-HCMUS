@@ -8,7 +8,6 @@ int main()
     char books[13][6];
     cout << "Nhap so luong hanh khach: ";
     cin >> passengers;
-    int num = passengers;
     // hang nhat: 1-2, hang thuong gia: 3->7, hang pho thong: 8->13
     int high = 1, mid = 3, low = 8;
     while (passengers > 0)
@@ -40,7 +39,6 @@ int main()
                 books[low][chairs[i]] = 'X';
             break;
         }
-
         i++;
         passengers--;
     }

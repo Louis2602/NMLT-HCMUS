@@ -10,10 +10,10 @@ struct CauThu
     int numAssists;
     int numGoals;
 };
-
+// nhap thong tin 1 cau thu
 void nhapThongTinCauThu(CauThu &ct)
 {
-    fflush(stdin);
+    rewind(stdin);
     cout << "\nNhap ten: ";
     cin >> ct.name;
     cout << "Nhap so ban thang: ";
@@ -21,6 +21,7 @@ void nhapThongTinCauThu(CauThu &ct)
     cout << "Nhap so ban ho tro: ";
     cin >> ct.numAssists;
 }
+// nhap danh sach cau thu
 void nhapSV(CauThu a[], int n)
 {
     cout << "\nNhap cau thu thu " << n + 1;
@@ -46,6 +47,7 @@ int xoaCauThu(CauThu a[], string tenCauThu, int n)
         if (a[i].name == tenCauThu)
         {
             found = 1;
+            // xoa
             for (int j = i; j < n; j++)
             {
                 a[j] = a[j + 1];
@@ -60,13 +62,11 @@ int xoaCauThu(CauThu a[], string tenCauThu, int n)
         return 0;
     }
     else
-    {
         return 1;
-    }
 }
 void capNhatThongTinCauThu(CauThu &ct)
 {
-    fflush(stdin);
+    rewind(stdin);
     cout << "\nNhap so ban thang: ";
     cin >> ct.numGoals;
     cout << "Nhap so ban ho tro: ";
@@ -114,7 +114,6 @@ int main()
 {
     int key;
     CauThu arrayCauThu[MAX];
-    CauThu cauthu;
     int soLuongCauThu = 0;
     while (true)
     {

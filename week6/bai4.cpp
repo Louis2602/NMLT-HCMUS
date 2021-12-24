@@ -66,7 +66,6 @@ void xuatDanhSachSV(SinhVien a[], int n)
 int main()
 {
     SinhVien a[MAX];
-    SinhVien SV;
     int key;
     int soLuongSV = 0;
     int idCount = 0;

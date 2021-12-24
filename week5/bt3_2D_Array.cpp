@@ -67,6 +67,7 @@ int sumDiagonalPhu(int a[][MAX], int m, int n)
         sum += a[i][m - 1 - i];
     return sum;
 }
+// xoa dong, cot chua gia tri x
 void deleteItems(int a[][MAX], int &m, int &n)
 {
     int x;
