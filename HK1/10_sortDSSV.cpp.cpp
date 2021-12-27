@@ -1,55 +1,51 @@
-#include<iostream>
-#include<fstream>
-#include<string>
+#include <iostream>
+#include <fstream>
+#include <cstring>
 
 using namespace std;
 
-struct student
+struct Student
 {
-	string id = "";
-	string name = "";
-	float gpa = 0;
+	string id;
+	string name;
+	float gpa;
 };
-
+void swap(int &a, int &b)
+{
+	int tmp = a;
+	a = b;
+	b = tmp;
+}
 int main()
 {
 	int n;
-	ifstream input;
-	student students[100];
-	int i = 0;
-	input.open("input.txt");
-	input >> n;
+	Student students[100];
 
-	//Doc file input.txt
-	for(int i = 0; i < n; i++)
+	ifstream fin;
+	fin.open("input.txt");
+	ofstream fout;
+	fout.open("output.txt");
+
+	// Doc file input.txt
+	fin >> n;
+	for (int i = 0; i < n; i++)
 	{
-		//input.ignore();
-		getline(input, students[i].id, '\n');
-		getline(input, students[i].name, '\n');
-		input >> students[i].gpa;
+		fin.ignore(); // bo qua dong dau tien
+		getline(fin, students[i].id, '\n');
+		getline(fin, students[i].name, '\n');
+		fin >> students[i].gpa;
+	}
+	// Sap xep tang dan
+	for (int i = 0; i < n - 1; ++i)
+		for (int j = 0; j < n - 1 - i; ++j)
+			if (students[j].gpa > students[j + 1].gpa)
+				swap(students[j].gpa, students[j + 1].gpa);
+
+	for (int i = 0; i < n; ++i)
+	{
+		fout << "ID: " << students[i].id << " ,Name: " << students[i].name << " ,GPA: " << students[i].gpa << endl;
 	}
 
-	//Sap xep giam dan
-	for (int k = 0; k < n - 1; k++)
-	{
-		for (int j = k + 1; j < n; j++)
-		{
-			if (students[k].gpa < students[j].gpa)
-			{
-				swap(students[k], students[j]);
-			}
-		}
-	}
-	input.close();
-
-	//Xuat file output.txt
-	ofstream output;
-	output.open("output.txt");
-
-	for (int k = 0; k < n; k++)
-	{
-		output << "ID: " << students[k].id << " ,Name: " << students[k].name << " ,GPA: " << students[k].gpa << endl;
-	}
-
-	output.close();
+	fin.close();
+	fout.close();
 }
