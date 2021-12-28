@@ -12,7 +12,7 @@ void swap(int &a, int &b)
 
 void tangdan(int a[], int n)
 {
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n; i++)
         for (int j = 0; j < n - i - 1; j++)
             if (a[j] > a[j + 1])
                 swap(a[j], a[j + 1]);
@@ -20,7 +20,7 @@ void tangdan(int a[], int n)
 
 void giamdan(int a[], int n)
 {
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n; i++)
         for (int j = 0; j < n - i - 1; j++)
             if (a[j] < a[j + 1])
                 swap(a[j], a[j + 1]);
