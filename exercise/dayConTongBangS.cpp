@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int n, s = 16;
+    int n, s = 6;
     int a[] = {1, 2, 3, 4, 5}, dp[40005] = {0};
     n = sizeof(a) / sizeof(int);
     dp[0] = 1;
@@ -19,9 +19,6 @@ int main()
         for (int j = s; j >= a[i]; --j)
             if (dp[j - a[i]] == 1)
                 dp[j] = 1;
-    if (dp[s] == 1)
-        cout << "YES";
-    else
-        cout << "NO";
+    (dp[s] == 1) ? cout << "YES" : cout << "NO";
     return 0;
 }
