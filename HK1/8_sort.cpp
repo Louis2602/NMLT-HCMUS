@@ -28,13 +28,11 @@ void giamdan(int a[], int n)
 
 void sortChanLe(int a[], int n)
 {
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n; i++)
         for (int j = i + 1; j < n; j++)
             if (a[i] > a[j] && a[i] % 2 == 0 && a[j] % 2 == 0)
                 swap(a[i], a[j]);
-    for (int i = 0; i < n - 1; i++)
-        for (int j = i + 1; j < n; j++)
-            if (a[i] < a[j] && a[i] % 2 != 0 && a[j] % 2 != 0)
+            else if (a[i] < a[j] && a[i] % 2 != 0 && a[j] % 2 != 0)
                 swap(a[i], a[j]);
 }
 void output(int a[], int n)
@@ -54,14 +52,14 @@ int main()
     {
         cin >> a[i];
     }
-    cout << "Mang tang dan: ";
-    tangdan(a, n);
-    output(a, n);
-    cout << endl;
-    cout << "Mang giam dan: ";
-    giamdan(a, n);
-    output(a, n);
-    cout << endl;
+    // cout << "Mang tang dan: ";
+    // tangdan(a, n);
+    // output(a, n);
+    // cout << endl;
+    // cout << "Mang giam dan: ";
+    // giamdan(a, n);
+    // output(a, n);
+    // cout << endl;
     cout << "Mang chan tang le giam: ";
     sortChanLe(a, n);
     output(a, n);
