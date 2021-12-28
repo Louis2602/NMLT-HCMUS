@@ -1,5 +1,0 @@
-ID: 2112021 ,Name: Nguyen Van AA ,GPA: 3.8
-ID: 2112043 ,Name: Pham Thi BB ,GPA: 4.5
-ID: 2112027 ,Name: Tran Van CC ,GPA: 7.3
-ID: 2112012 ,Name: Phan Thi DD ,GPA: 8.7
-ID: 2112035 ,Name: Quach Thi EE ,GPA: 9.6
