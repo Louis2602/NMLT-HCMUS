@@ -14,8 +14,7 @@ void nhapThongTinSinhVien(SinhVien &sv)
     cin >> sv.mssv;
     rewind(stdin);
     cout << "\nNhap ho ten sinh vien: ";
-    getline(cin, sv.hoten);
-    cout << "\nNhap diem TB: ";
+    getline(cin, sv.hoten); cout << "\nNhap diem TB: ";
     cin >> sv.diemTB;
 }
 

@@ -12,7 +12,10 @@ int main()
     int a,b, d;
     Data y;
     vector<Data> v;
-    cin >> a >> b;
+    cout << "Nhap so thu 1: ";
+    cin >> a;
+    cout << "Nhap so thu 2: ";
+    cin >> b;
     a = abs(a);
     b = abs(b);
     int r = 0,x;
